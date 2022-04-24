@@ -9,5 +9,13 @@ namespace MyShoppingCart.Components
 
         [Parameter]
         public int Count { get; set; } = 0;
+        public EventCallback<int> CountChanged { get; set; }
+
+        protected override async Task OnInitalizedAsync()
+        {
+            await base.OnInitializedAsync();
+
+
+        }
     }
 }
